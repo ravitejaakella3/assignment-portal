@@ -1,0 +1,35 @@
+﻿Assignment Overview
+
+
+This project is a web-based system designed to manage users, admins and assignments. It allows users to register, log in and upload assignments. Admins have the ability to view, accept or reject these assignments. The system ensures security through JWT-based authentication. The backend is developed using Node.js and MongoDB, leveraging the native HTTP API to handle requests and responses without external frameworks.
+Key Features:
+* User Management: Users can register, log in, and upload assignments.
+* Admin Functionality: Admins can view submitted assignments and either accept or reject them.
+* Authentication: JWT is used for secure authentication and session management.
+* Database Integration: MongoDB is utilized for storing user information, assignments, and other related data.
+The project structure is modular, separating controllers, models and middlewares, ensuring clean and maintainable code. The native HTTP API allows lightweight handling of requests without the need for Express or other frameworks
+
+
+Prerequisites
+Node.js (version 16+)
+MongoDB (version 5+)
+Postman or similar (optional for API testing)
+
+
+Install Dependencies
+npm install
+npm init -y
+npm install mongodb bcryptjs jsonwebtoken
+
+
+Configure MongoDB Connection
+const uri = 'mongodb://localhost:27017';  // MongoDB connection string
+const client = new MongoClient(uri);
+const dbName = 'assignmentportal';  // Change the database name if necessary
+
+
+You need to create a database in your MongoDB. The database will be located at the above mentioned localhost.
+
+
+How to run:
+node server.js
