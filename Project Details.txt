@@ -33,3 +33,7 @@ You need to create a database in your MongoDB. The database will be located at t
 
 How to run:
 node server.js
+
+For the API, registration and login can be done directly via the respective endpoints. Upon successful login, a token is generated. If you log in with the "user" role, the system will generate a token that must be included in subsequent requests to protected routes.
+For example, when accessing the /user/upload or /user/alladmins endpoints, the token must be added to the request headers. The header key should be "Authorization" and the value must be in the format "Bearer <token>".
+Similarly, for admin specific routes such as /admin/assignments and /admin/assignments/:id/accept, the same token-based authentication process is followed. Ensure the token is passed in the header for these requests as well, using the same "Authorization" key and "Bearer <token>" format.
